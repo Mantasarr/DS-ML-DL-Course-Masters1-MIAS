@@ -1,0 +1,30 @@
+# Master's course: Data Science, ML & Deep Learning
+# Blocks 1-2 (Sessions 0-7). Install Block 3 additions from requirements-dl.txt
+# before Session 8.
+#
+#   python -m venv .venv
+#   .venv/Scripts/activate            # Windows
+#   source .venv/bin/activate         # macOS / Linux
+#   pip install -r requirements.txt
+#
+# Exact transitive pins are recorded in requirements-lock.txt.
+
+# --- core data stack ---
+numpy==2.5.2
+pandas==3.0.5
+pyarrow==25.0.1           # parquet, for the sealed test set
+
+# --- modelling ---
+scikit-learn==1.9.0
+scipy==1.18.0             # paired t-tests in Sessions 6-7
+xgboost==3.4.1            # one hands-on run in Session 7 only
+
+# --- visualisation ---
+matplotlib==3.11.1
+seaborn==0.13.2
+
+# --- notebooks ---
+jupyterlab==4.6.3
+ipykernel==7.3.0
+nbformat==5.11.1
+nbclient==0.11.0          # used by tools/build_notebooks.py to execute builds

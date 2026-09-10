@@ -1,0 +1,16 @@
+# environment
+.venv/
+__pycache__/
+*.py[cod]
+
+# notebook cruft
+.ipynb_checkpoints/
+
+# you generate these yourself - and the sealed test set stays on your machine
+data/SEALED_TEST/
+data/interim/*
+!data/interim/description_embeddings.npz
+
+# scratch
+scratch/
+*.log
