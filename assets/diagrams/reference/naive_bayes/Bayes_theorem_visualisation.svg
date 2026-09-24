@@ -1,0 +1,138 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="-135 -28 400 300">
+ <title>Bayes theorem visualisation</title>
+ <desc>A geometric visualisation of Bayes' theorem by CMG Lee. In the table, the values ''w'', ''x'', ''y'' and ''z'' give the relative sizes of each corresponding condition and case. The figures denote the cells of the table involved in each metric, the probability being the fraction of each figure that is shaded. This shows that P(A|B) P(B) = P(B|A) P(A) i.e. P(A|B) = P(B|A) P(A) / P(B). Similar reasoning can be used to show that P(B|A) = P(A|B) P(B) / P(A) etc.</desc>
+ <defs>
+  <rect id="w" x="0"  y="0"  width="30" height="10" stroke="#000000"/>
+  <rect id="x" x="30" y="0"  width="40" height="10" stroke="#000000"/>
+  <rect id="y" x="0"  y="10" width="30" height="20" stroke="#000000"/>
+  <rect id="z" x="30" y="10" width="40" height="20" stroke="#000000"/>
+
+  <g id="pa">
+   <use xlink:href="#w" fill="#999999"/>
+   <use xlink:href="#x" fill="#999999"/>
+   <use xlink:href="#y"/>
+   <use xlink:href="#z"/>
+  </g>
+  <g id="pb">
+   <use xlink:href="#w" fill="#999999"/>
+   <use xlink:href="#x"/>
+   <use xlink:href="#y" fill="#999999"/>
+   <use xlink:href="#z"/>
+  </g>
+  <g id="pba">
+   <use xlink:href="#w" fill="#999999"/>
+   <use xlink:href="#x"/>
+  </g>
+  <g id="pab">
+   <use xlink:href="#w" fill="#999999"/>
+   <use xlink:href="#y"/>
+  </g>
+  <g id="p">
+   <use xlink:href="#w" fill="#999999"/>
+   <use xlink:href="#x"/>
+   <use xlink:href="#y"/>
+   <use xlink:href="#z"/>
+  </g>
+
+  <text id="pa_l"  x="0" y="0"><tspan>P</tspan><tspan dx="2">(A)</tspan></text>
+  <text id="pb_l"  x="0" y="0"><tspan>P</tspan><tspan dx="2">(B)</tspan></text>
+  <text id="pba_l" x="0" y="0"><tspan>P</tspan><tspan dx="2">(B|A)</tspan></text>
+  <text id="pab_l" x="0" y="0"><tspan>P</tspan><tspan dx="2">(A|B)</tspan></text>
+  <text id="pa_f"  x="0" y="0" font-style="italic"><tspan x="0" dy="-10">w+x</tspan><tspan x="3" dy="3">________</tspan><tspan x="0" dy="18">w+x+y+z</tspan></text>
+  <text id="pb_f"  x="0" y="0" font-style="italic"><tspan x="0" dy="-10">w+y</tspan><tspan x="3" dy="3">________</tspan><tspan x="0" dy="18">w+x+y+z</tspan></text>
+  <text id="pba_f" x="0" y="0" font-style="italic"><tspan x="0" dy="-10">w</tspan><tspan   x="3" dy="3">____</tspan><tspan     x="0" dy="18">w+x</tspan></text>
+  <text id="pab_f" x="0" y="0" font-style="italic"><tspan x="0" dy="-10">w</tspan><tspan   x="3" dy="3">____</tspan><tspan     x="0" dy="18">w+y</tspan></text>
+  <text id="p_f"   x="0" y="0" font-style="italic"><tspan x="0" dy="-10">w</tspan><tspan   x="3" dy="3">________</tspan><tspan x="0" dy="18">w+x+y+z</tspan></text>
+
+  <text id="equal" x="0" y="0">=</text>
+  <text id="times" x="0" y="0">&#215;</text>
+
+  <path id="cancel" d="M -20,10 L 22,0" stroke="#cccccc" stroke-width="2"/>
+ </defs>
+
+ <rect x="-999" y="-999" width="1999" height="1999" fill="#ffffff"/>
+ <g font-family="serif" font-size="18" letter-spacing="-1" text-anchor="middle" stroke-linecap="round" stroke="none" fill="none">
+  <path d="M 0,-25 V 85 M 60,-25 V 85 M 140,-25 V 85 M -100,0 H 220 M -100,20 H 220 M -100,60 H 220" stroke="#cccccc" stroke-width="2"/>
+  <g transform="scale(2,2)">
+   <use xlink:href="#w"/>
+   <use xlink:href="#x"/>
+   <use xlink:href="#y"/>
+   <use xlink:href="#z"/>
+  </g>
+  <g fill="#000000">
+   <switch allowReorder="yes">
+    <text systemLanguage="uk" x="-55" y="-9"><tspan>Відн. розмір</tspan><tspan     x="30">Вип. B</tspan><tspan                   x="100">Вип. B</tspan><tspan dx="-0.55em" dy="-1em">_</tspan><tspan x="180" dy="1em">Разом</tspan></text>
+    <text                     x="-55" y="-9"><tspan>Relative size</tspan><tspan    x="30">Case B</tspan><tspan                   x="100">Case B</tspan><tspan dx="-0.55em" dy="-1em">_</tspan><tspan x="180" dy="1em">Total</tspan></text>
+   </switch>
+   <switch allowReorder="yes">
+    <text systemLanguage="uk" x="-55" y="16"><tspan>Умова A</tspan><tspan          x="30" font-style="italic">w</tspan><tspan    x="100" font-style="italic">x</tspan><tspan   x="180" font-style="italic">w+x</tspan></text>
+    <text                     x="-55" y="16"><tspan>Condition A</tspan><tspan      x="30" font-style="italic">w</tspan><tspan    x="100" font-style="italic">x</tspan><tspan   x="180" font-style="italic">w+x</tspan></text>
+   </switch>
+   <switch allowReorder="yes">
+    <text systemLanguage="uk" x="-55" y="45"><tspan>Умова &#256;</tspan><tspan x="30" font-style="italic">y</tspan><tspan    x="100" font-style="italic">z</tspan><tspan   x="180" font-style="italic">y+z</tspan></text>
+    <text                     x="-55" y="45"><tspan>Condition &#256;</tspan><tspan x="30" font-style="italic">y</tspan><tspan    x="100" font-style="italic">z</tspan><tspan   x="180" font-style="italic">y+z</tspan></text>
+   </switch>
+   <switch allowReorder="yes">
+    <text systemLanguage="uk" x="-55" y="80"><tspan>Разом</tspan><tspan            x="30" font-style="italic">w+y</tspan><tspan  x="100" font-style="italic">x+z</tspan><tspan x="180" font-style="italic">w+x+y+z</tspan></text>
+    <text                     x="-55" y="80"><tspan>Total</tspan><tspan            x="30" font-style="italic">w+y</tspan><tspan  x="100" font-style="italic">x+z</tspan><tspan x="180" font-style="italic">w+x+y+z</tspan></text>
+   </switch>
+<!--
+   <g transform="translate(10,140)">
+    <use xlink:href="#pa_l"  transform="translate(0,  0)"/>
+    <use xlink:href="#equal" transform="translate(40, 0)"/>
+    <use xlink:href="#pa_f"  transform="translate(120,0)"/>
+    <use xlink:href="#pb_l"  transform="translate(0,  40)"/>
+    <use xlink:href="#equal" transform="translate(40, 40)"/>
+    <use xlink:href="#pb_f"  transform="translate(120,40)"/>
+    <use xlink:href="#pba_l" transform="translate(0,  80)"/>
+    <use xlink:href="#equal" transform="translate(40, 80)"/>
+    <use xlink:href="#pba_f" transform="translate(120,80)"/>
+    <use xlink:href="#pab_l" transform="translate(0,  120)"/>
+    <use xlink:href="#equal" transform="translate(40, 120)"/>
+    <use xlink:href="#pab_f" transform="translate(120,120)"/>
+   </g>
+-->
+   <g transform="translate(-100,165)">
+    <use xlink:href="#pab_l"  transform="translate(0,  0)"/>
+    <use xlink:href="#times"  transform="translate(50, 0)"/>
+    <use xlink:href="#pb_l"   transform="translate(90, 0)"/>
+    <use xlink:href="#equal"  transform="translate(120,0)"/>
+    <use xlink:href="#cancel" transform="translate(150,0)"/>
+    <use xlink:href="#pab_f"  transform="translate(150,0)"/>
+    <use xlink:href="#times"  transform="translate(180,0)"/>
+    <use xlink:href="#cancel" transform="translate(225,-20)"/>
+    <use xlink:href="#pb_f"   transform="translate(225,0)"/>
+    <use xlink:href="#equal"  transform="translate(275,0)"/>
+    <use xlink:href="#p_f"    transform="translate(320,0)"/>
+    <use xlink:href="#pba_l"  transform="translate(0,  90)"/>
+    <use xlink:href="#times"  transform="translate(50, 90)"/>
+    <use xlink:href="#pa_l"   transform="translate(90, 90)"/>
+    <use xlink:href="#equal"  transform="translate(120,90)"/>
+    <use xlink:href="#cancel" transform="translate(150,90)"/>
+    <use xlink:href="#pba_f"  transform="translate(150,90)"/>
+    <use xlink:href="#times"  transform="translate(180,90)"/>
+    <use xlink:href="#cancel" transform="translate(225,70)"/>
+    <use xlink:href="#pa_f"   transform="translate(225,90)"/>
+    <use xlink:href="#equal"  transform="translate(275,90)"/>
+    <use xlink:href="#p_f"    transform="translate(320,90)"/>
+   </g>
+  </g>
+<!--
+  <g transform="translate(-100,120)">
+   <use xlink:href="#pa"/>
+   <use xlink:href="#pb"  transform="translate(0,40)"/>
+   <use xlink:href="#pba" transform="translate(0,80)"/>
+   <use xlink:href="#pab" transform="translate(0,120)"/>
+  </g>
+-->
+  <g transform="translate(-130,110)">
+   <use xlink:href="#pba" transform="translate(0,  90)"/>
+   <use xlink:href="#pa"  transform="translate(90, 90)"/>
+   <use xlink:href="#p"   transform="translate(320,90)"/>
+   <use xlink:href="#pab" transform="translate(0,  0)"/>
+   <use xlink:href="#pb"  transform="translate(90, 0)"/>
+   <use xlink:href="#p"   transform="translate(320,0)"/>
+  </g>
+ </g>
+</svg>
