@@ -1,0 +1,12 @@
+# Block 3 (Sessions 8-11) additions. Install before Session 8.
+#
+#   pip install -r requirements-dl.txt
+#
+# CPU-only wheels are sufficient for every core exercise. Install torch from the
+# CPU index to avoid pulling ~2.5 GB of CUDA libraries you will not use:
+#
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+#   pip install sentence-transformers
+
+torch==2.13.0            # verified: 2.13.0+cpu, torch.get_num_threads()=4
+sentence-transformers   # frozen MiniLM-class encoder for Session 11 text branch
