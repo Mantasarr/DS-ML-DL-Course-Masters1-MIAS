@@ -28,35 +28,6 @@ If imports work in the terminal but fail inside JupyterLab, your notebook is
 running a different Python. Put `import sys; print(sys.executable)` in the first
 cell and compare it against the interpreter you installed into.
 
-## What is here
-
-| | Session | Notebooks |
-|---|---|---|
-| **Session 0** | Prerequisites | `notebooks/00a_environment_setup.ipynb`<br>`notebooks/00b_python_for_data_science.ipynb`<br>`notebooks/00c_numpy_essentials.ipynb`<br>`notebooks/00d_visualization_reference.ipynb`<br>`notebooks/00e_diagnostic_quiz.ipynb`<br>`notebooks/00f_remediation.ipynb` |
-| **Session 1** | The Data Science Workflow & First Contact with Data | `notebooks/01_workflow_and_first_contact.ipynb` |
-| **Session 2** | Data Quality, the Split-First Rule & Visual Reasoning | `notebooks/02_data_quality_and_visual_reasoning.ipynb` |
-| **Session 3** | Feature Engineering, Pipelines & Data Leakage | `notebooks/03_features_pipelines_and_leakage.ipynb` |
-
-- `slides/00_fundamentals_and_vocabulary.pptx` - **start here**: the ideas and the
-  words the rest of the course assumes, with no prior machine learning needed
-- `project/PROJECT_BRIEF.md` - the brief, the two clients, and the one rule
-- `project/MILESTONES.md` - what each deliverable must contain, and how it is assessed
-- `src/` - shared helpers the notebooks import
-- `tools/check_setup.py` - the setup verifier
-
-## Not here yet
-
-Later sessions are published as we reach them - pull this repository again before each session:
-
-- Session 4 - Regression, Baselines & Honest Error
-- Session 5 - Classification & the Metric Problem
-- Session 6 - Validation, Model Selection & Tuning
-- Session 7 - Ensembles, Interpretation & Error Analysis
-- Session 8 - From Linear Models to Neural Networks
-- Session 9 - Training Neural Networks in Practice
-- Session 10 - Generalization in Deep Learning
-- Session 11 - Representation Learning
-- Session 12 - Assessment & Defence
 
 ## Working in these notebooks
 
